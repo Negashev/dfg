@@ -61,7 +61,7 @@ async def build_from_git():
 
 async def connect_scheduler():
     scheduler = AsyncIOScheduler(timezone="UTC")
-    scheduler.add_job(build_from_git, CronTrigger.from_crontab(os.getenv('DFG_CRON', '* * * * *')), max_instances=1)
+    scheduler.add_job(build_from_git, CronTrigger.from_crontab(os.getenv('DFG_CRON', '0 * * * *')), max_instances=1)
     scheduler.start()
 
 
