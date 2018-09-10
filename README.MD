@@ -4,6 +4,8 @@ Dockerfile from git
 
 It's create docker image form git like [docker build git](https://docs.docker.com/engine/reference/commandline/build/#git-repositories) by cron
 
+#### You need in `git` in host machine with docker!
+
 And pushed new image to registry (build with build-args)
 
 ```bash
